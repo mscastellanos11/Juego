@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="https://i.ibb.co/F6hPVK6/ahorcado-6.png" type="image/x-icon">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7x1z8azB1rHLt4w6xjFh5Cr4p5ylfN6aIVX"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      #content-game {
+        display: none;
+      }
+      #div-agregar-palabras {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-image">
+    <div class="contenedor">
+      <div class="contenedor-principal">
+          <h1>Bienvenido al Juego del Ahorcado</h1>
+          <p>El objetivo es adivinar la palabra oculta letra por letra. Cada error te acercará al límite de intentos permitidos. <br>¿Podrás salvarte antes de completar el dibujo?</p>
+          <h2>Reglas del Juego:</h2>
+          <ul>
+            <li>Tienes un máximo de 6 intentos para adivinar la palabra.</li>
+            <li>Solo puedes seleccionar letras del abecedario disponible en el teclado del computador.</li>
+            <li>Por cada letra correcta, aparecerá en su posición dentro de la palabra.</li>
+            <li>Por cada error, se dibujará una parte del ahorcado.</li>
+            <li>¡El juego termina si completas la palabra o si el dibujo se completa primero!</li>
+          </ul>
+          <h2>Instrucciones:</h2>
+          <ul>
+            <li>Oprime las letras del teclado del computador para intentar adivinar la palabra.</li>
+            <li>Si adivinas todas las letras antes de perder los 6 intentos, ¡ganas!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sección principal del juego -->
+    <section class="content" id="content-game">
+      <h1>Bienvenidos al juego: El Ahorcado.</h1>
+      <div class="img">
+        <img id="img" src="" alt="img" />
+      </div>
+      <div class="text"><strong>Letras utilizadas</strong></div>
+      <div class="letras-utilizadas" id="letrasUtilizadas">
+      </div>
+      <div class="errores">
+        <p>Intentos maximos: 6</p>
+        <p id="errores"></p>
+      </div>
+      <div class="letras-a-descubrir" id="letras-a-descubrir">
+      </div>
+      <div class="teclado" id="teclado">
+        <span class="tecla"><i>Q</i></span>
+        <span class="tecla"><i>W</i></span>
+        <span class="tecla"><i>E</i></span>
+        <span class="tecla"><i>R</i></span>
+        <span class="tecla"><i>T</i></span>
+        <span class="tecla"><i>Y</i></span>
+        <span class="tecla"><i>U</i></span>
+        <span class="tecla"><i>I</i></span>
+        <span class="tecla"><i>O</i></span>
+        <span class="tecla"><i>P</i></span>
+        <span class="tecla"><i>A</i></span>
+        <span class="tecla"><i>S</i></span>
+        <span class="tecla"><i>D</i></span>
+        <span class="tecla"><i>F</i></span>
+        <span class="tecla"><i>G</i></span>
+        <span class="tecla"><i>H</i></span>
+        <span class="tecla"><i>J</i></span>
+        <span class="tecla"><i>K</i></span>
+        <span class="tecla"><i>L</i></span>
+        <span class="tecla"><i>Ñ</i></span>
+        <span class="tecla"><i>Z</i></span>
+        <span class="tecla"><i>X</i></span>
+        <span class="tecla"><i>C</i></span>
+        <span class="tecla"><i>V</i></span>
+        <span class="tecla"><i>B</i></span>
+        <span class="tecla"><i>N</i></span>
+        <span class="tecla"><i>M</i></span>
+      </div>
+    </section>
+    
+    <div class="bienvenido" id="bienvenido">
+      <h2>Listo para jugar</h2>
+      <button id="empezar" class="btn btn-primary">Empezar</button>
+    </div>
+  </div>
+  <div class="contenedor-botones">
+    <a href="integrantes.html" class="btn btn-link enlace-integrantes">INTEGRANTES</a>
+  </div>  
+
+    <section id="div-agregar-palabras" class="div-agregar-palabras">
+      <h2>!Muy Bien completaste el juego¡ para seguir jugando necesitas agregar más palabras</h2>
+      <form id="form-agregar-palabras">
+        <div class="input-error">
+          <input type="text" id="input" value="" class="form-control">
+          <span id="error"></span>
+        </div>
+          <button type="submit" id="button-agregar-palabras" class="btn btn-success mt-2">Agregar más Palabras</button>
+      </form>
+      <button id="volver-a-iniciar" class="btn btn-secondary mt-2">Iniciar el juego</button>
+    </section>
+    <script defer src="index.js"></script>
+    <script defer src="palabras.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoYmrKc6IhKN/8YBZT1h4uE4KKxB6r9kk1T+Xkd4K5smIl3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const startButton = document.getElementById("empezar");
+        const presentacion = document.getElementById("presentacion");
+        const contentGame = document.getElementById("content-game");
+
+        startButton.addEventListener("click", () => {
+          presentacion.style.display = "none";
+          contentGame.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

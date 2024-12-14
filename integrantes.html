@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividir Nombres</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .contenedor-nombres {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cajon {
+            background-color: #7856d4;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .foto {
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #7856d4;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a:hover {
+            background-color: #7856d4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-nombres">
+        <div class="cajon">
+            <div class="foto">
+                <!-- Puedes insertar una imagen aquí -->
+                <img src="yo1.jpg" alt="Foto">
+            </div>
+            Marlon Steven Castellanos Paez
+        </div>
+        <div class="cajon">
+            <div class="foto">
+                <!-- Puedes insertar una imagen aquí -->
+                <img src="yeison.jpg" alt="Foto">
+            </div>
+            Yeison Armando Barreto Ibañez
+        </div>
+        <div class="cajon">
+            <div class="foto">
+                <!-- Puedes insertar una imagen aquí -->
+                <img src="jira.jpg" alt="Foto">
+            </div>
+            Carlos Adrian Jaime Aguablanca
+        </div>
+        <div class="cajon">
+            <div class="foto">
+                <!-- Puedes insertar una imagen aquí -->
+                <img src="william.jpg" alt="Foto">
+            </div>
+            William Esneider Blanco López
+        </div>
+        <div class="cajon">
+            <div class="foto">
+                <!-- Puedes insertar una imagen aquí -->
+                <img src="eimard.jpg" alt="Foto">
+            </div>
+            Eimard Gioavani Lizcano Carrillo
+        </div>
+    </div>
+    <a href="index.html">Regresar</a>
+</body>
+</html>
